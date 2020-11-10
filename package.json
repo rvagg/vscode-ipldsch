@@ -1,0 +1,44 @@
+{
+  "name": "ipld-schema",
+  "displayName": "IPLD Schema DSL",
+  "description": "Syntax highlighting for the IPLD Schema DSL",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ipldsch",
+        "aliases": [
+          "IPLD Schema"
+        ],
+        "extensions": [
+          ".ipldsch"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ipldsch",
+        "scopeName": "source.ipldsch",
+        "path": "./syntaxes/ipldsch.tmLanguage.json",
+        "injectTo": [ "text.html.markdown" ]
+      },
+      {
+        "scopeName": "markdown.ipldsch.codeblock",
+        "path": "./syntaxes/ipldsch.markdown.codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.ipldsch": "ipldsch"
+        }
+      }
+    ]
+  }
+}

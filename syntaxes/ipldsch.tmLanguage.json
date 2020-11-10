@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "IPLD Schema",
+  "patterns": [
+		{ "include": "#comments" },
+		{ "include": "#types" },
+		{ "include": "#entities" },
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#constants" },
+		{ "include": "#punctuation" }
+	],
+	"repository": {
+    "comments": {
+      "patterns": [{
+        "name": "comment.line.number-sign",
+        "begin": "#",
+        "end": "\\n"
+      }]
+    },
+		"types": {
+			"patterns": [
+        {
+  				"name": "storage.type.ipldsch",
+	  			"match": "\\b(bool|int|float|string|bytes|null|nullable|optional)\\b"
+        },
+        {
+  				"name": "storage.modifier.ipldsch",
+	  			"match": "^[ \\t]*(type|advanced)\\b"
+        }
+      ]
+    },
+		"entities": {
+			"patterns": [{
+        "name": "entity.name.type.ipldsch",
+        "match": "(?<=^[ \\t]*(type|advanced)\\s+)([A-Z][A-Za-z0-9]*)"
+      }]
+    },
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.other.ipldsch",
+				"match": "\\b(struct|union|enum)(?=[ \\t]*\\{)"
+			}]
+    },
+		"strings": {
+			"name": "string.quoted.double.ipldsch",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ipldsch",
+					"match": "\\\\."
+				}
+			]
+    },
+    "constants": {
+			"patterns": [{
+        "name": "constant.numeric.ipldsch",
+        "match": "\\b-?\\d+\\.?\\d*(?:e[+-]?\\d+)?\\b"
+      }]
+    },
+    "punctuation": {
+			"patterns": [{
+        "name": "keyword.operator.ipldsch",
+        "match": "[\\(\\)\\{\\}:\\[\\]\\|&]"
+      }]
+    }
+	},
+	"scopeName": "source.ipldsch"
+}
