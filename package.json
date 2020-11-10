@@ -3,6 +3,7 @@
   "displayName": "IPLD Schema DSL",
   "description": "Syntax highlighting for the IPLD Schema DSL",
   "version": "0.0.1",
+  "publisher": "rvagg",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -40,5 +41,11 @@
         }
       }
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvagg/vscode-ipldsch.git"
+  },
+  "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
+  "license": "Apache-2.0"
 }
