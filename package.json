@@ -2,11 +2,11 @@
   "name": "ipld-schema",
   "displayName": "IPLD Schema",
   "description": "Syntax highlighting for the IPLD Schema DSL",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "rvagg",
   "icon": "ipld.png",
   "engines": {
-    "vscode": "^1.51.0"
+    "vscode": "^1.42.0"
   },
   "categories": [
     "Programming Languages"
