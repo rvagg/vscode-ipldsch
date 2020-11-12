@@ -1,6 +1,6 @@
 # IPLD Schema language extension for VS Code
 
-More information about IPLD Schema langauge: https://specs.ipld.io/schemas/
+More information about IPLD Schema language: https://specs.ipld.io/schemas/
 
 ![Example highlighting](https://raw.githubusercontent.com/rvagg/vscode-ipldsch/master/example.png)
 
